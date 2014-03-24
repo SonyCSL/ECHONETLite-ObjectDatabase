@@ -4,7 +4,7 @@ Package-type commercial air conditioner (indoor unit),,0x01,0x45,○,,,,,,,
 ,,,,,,,,,,,
 ,,,,,,,,,,,
 EPC,Property name,Contents of property,Value range(decimal notation),Unit,Data type,Data size,Access rule(Anno),Access rule(Set),Access rule(Get),Announcement at status change,Remark
-0x80,Operation status,This property indicates the ON/OFF status.,"ON=0x30, OFF=0x31",—,unsigned char,1,-,mandatory,mandatory,mandatory,
+0x80,Operation status,This property indicates the ON/OFF status.,"ON=0x30, OFF=0x31",-,unsigned char,1,-,mandatory,mandatory,mandatory,
 0xB0,Operation mode setting,"Used to specify the operation mode (“automatic,” “cooling,” “heating,” “dehumidification” or “air circulator”) and to acquire the current setting.",The following values shall be used: Automatic: 0x41_x000a_Cooling: 0x42_x000a_Heating: 0x43 Dehumidification: 0x44 Air circulator: 0x45,,unsigned char,1,-,mandatory,mandatory,mandatory,
 0xB3,Temperature setting 1,Used to set the temperature and to acquire the current setting.,0x00.0x32 (0.50°C),1°C,signed char,1,-,mandatory,mandatory,mandatory,
 0xB4,“Relative_x000a_humidity setting for ‘dehumidifica- tion’ mode” 1,Used to set the relative humidity for the “dehumidification” mode and to acquire the current setting.,0x00.0x64 (0.100%),0.01,unsigned char,1,-,optional,optional,mandatory,

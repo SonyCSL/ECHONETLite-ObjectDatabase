@@ -4,7 +4,7 @@ General lighting class,"Including chandelier, stand, bracket, down light, spot l
 ,,,,,,,,,,,
 ,,,,,,,,,,,
 EPC,Property name,Contents of property,Value range(decimal notation),Unit,Data type,Data size,Access rule(Anno),Access rule(Set),Access rule(Get),Announcement at status change,Remark
-0x80,Operation status,This property indicates the ON/OFF status.,"ON=0x30, OFF=0x31",—,unsigned char,1,-,mandatory,mandatory,mandatory,
+0x80,Operation status,This property indicates the ON/OFF status.,"ON=0x30, OFF=0x31",-,unsigned char,1,-,mandatory,mandatory,mandatory,
 0xB0,Illuminance level,This property indicates illuminance level in %.,0x00.0x64 (0.100%),%,unsigned char,1,-,optional,optional,-,
 0xB1,Light color setting,This property indicates the color setting.,"Incandescent lamp color = 0x41, white = 0x42, daylight white = 0x43, daylight color = 0x44, other = 0x40",.,unsigned char,1,-,optional,optional,-,
 0xB2,Illuminance level step setting,Used to specify the illuminance level in terms of steps and acquire the current setting.,From 0x01 to the maximum specifiable illuminance level value (from dark to bright),.,unsigned char,1,-,optional,optional,-,

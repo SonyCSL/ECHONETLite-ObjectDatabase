@@ -4,7 +4,7 @@ Washing machine,,0x03,0xC5,○,,,,,,,
 ,,,,,,,,,,,
 ,,,,,,,,,,,
 EPC,Property name,Contents of property,Value range(decimal notation),Unit,Data type,Data size,Access rule(Anno),Access rule(Set),Access rule(Get),Announcement at status change,Remark
-0x80,Operation status,This  property  indicates  the  ON/OFF status.,"ON=0x30, OFF=0x31",—,unsigned char,1,-,optional,mandatory,mandatory,
+0x80,Operation status,This  property  indicates  the  ON/OFF status.,"ON=0x30, OFF=0x31",-,unsigned char,1,-,optional,mandatory,mandatory,
 0xB0,Door/cover open/close status,This property indicates whether the door/cover is open or closed.,Door/cover open = 0x41 Door/cover closed = 0x42,-,unsigned char,1,-,-,optional,-,
 0xB2,Washing machine setting,Washing machine setting,Start/restart the washing cycle (started/restarted) = 0x41_x000a_Suspend the washing cycle (suspended) = 0x42_x000a_Stop the washing cycle (stopped) = 0x43,-,unsigned char,1,-,optional,optional,-,
 0xE1,Current stage of washing cycle,This property indicates the current stage of the washing cycle.,"Washing = 0x41, rinsing = 0x42, spin drying = 0x43, suspended = 0x44, washing cycle stopped/completed = 0x45",-,unsigned char,1,-,-,optional,-,

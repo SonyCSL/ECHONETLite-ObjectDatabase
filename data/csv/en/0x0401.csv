@@ -4,6 +4,6 @@ Weighing machine,,0x04,0x01,○,,,,,,,
 ,,,,,,,,,,,
 ,,,,,,,,,,,
 EPC,Property name,Contents of property,Value range(decimal notation),Unit,Data type,Data size,Access rule(Anno),Access rule(Set),Access rule(Get),Announcement at status change,Remark
-0x80,Operation status,This property indicates the ON/OFF status of the weighing machine operation,"ON=0x30, OFF=0x31",—,unsigned short,1,-,optional,mandatory,mandatory,
+0x80,Operation status,This property indicates the ON/OFF status of the weighing machine operation,"ON=0x30, OFF=0x31",-,unsigned short,1,-,optional,mandatory,mandatory,
 0xE0,Measured value of body weight,This property indicates measured value of body weight in units of 0.1 kg.,0x0000.0xFFFD (0.6553.3kg),0.1 kg,unsigned short,2,-,-,mandatory,-,
 0xE1,Measured value of body fat,This property indicates measured value of body fat in units of 0.1%.,0x0000.0x03E8 (0.100.0%),0.001,unsigned short,2,-,-,optional,-,

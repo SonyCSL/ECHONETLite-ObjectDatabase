@@ -12,7 +12,7 @@ $ gem install google_drive
 I checked ruby 1.9.3,2.1.1 on Linux.
 Maybe, 1.9.2 or upper is OK.(nokogiri require 1.9.2)
 
-## Downlaoder (downloader.rb)
+## Downloader (downloader.rb)
 Download csv files to local.
 
 ### Usage

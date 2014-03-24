@@ -4,5 +4,5 @@ Differential pressure sensor,,0x00,0x1E,○,,,,,,,
 ,,,,,,,,,,,
 ,,,,,,,,,,,
 EPC,Property name,Contents of property,Value range(decimal notation),Unit,Data type,Data size,Access rule(Anno),Access rule(Set),Access rule(Get),Announcement at status change,Remark
-0x80,Operation status,This property indicates the ON/OFF status.,"ON=0x30, OFF=0x31",—,unsigned char,1,-,optional,mandatory,mandatory,
+0x80,Operation status,This property indicates the ON/OFF status.,"ON=0x30, OFF=0x31",-,unsigned char,1,-,optional,mandatory,mandatory,
 0xE0,Measured value of differential pressure,This property indicates measured value of differential pressure in Pa.,0x8001.0x7FFE (-32767.32766),Pa,signed short,2,-,-,mandatory,-,

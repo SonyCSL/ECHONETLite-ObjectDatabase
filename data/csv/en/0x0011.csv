@@ -4,5 +4,5 @@ Temperature sensor,,0x00,0x11,○,,,,,,,
 ,,,,,,,,,,,
 ,,,,,,,,,,,
 EPC,Property name,Contents of property,Value range(decimal notation),Unit,Data type,Data size,Access rule(Anno),Access rule(Set),Access rule(Get),Announcement at status change,Remark
-0x80,Operation status,This property indicates the ON/OFF status.,"ON=0x30, OFF=0x31",—,unsigned char,1,-,optional,mandatory,mandatory,
-0xE0,Measured temperature value,This property indicates the measured temperature value in units of 0.1.C.,0xF554.0x7FFE (-2732.32766) (-273.2.3276.6.C),0.1.C,signed short,2,-,-,mandatory,-,
+0x80,Operation status,This property indicates the ON/OFF status.,"ON=0x30, OFF=0x31",-,unsigned char,1,-,optional,mandatory,mandatory,
+0xE0,Measured temperature value,This property indicates the measured temperature value in units of 0.1°C.,0xF554.0x7FFE (-2732.32766) (-273.2.3276.6°C),0.1°C,signed short,2,-,-,mandatory,-,

@@ -12,7 +12,7 @@ EPC,Property name,Contents of property,Value range(decimal notation),Unit,Data t
 0xB4,Bathroom dryer operation setting,Used to set the bathroom drying level for the bathroom dryer mode and to acquire the current setting.,Automatic        : 0x41_x000a_Standard          : 0x42 Bathroom drying level_x000a_: 0x31.0x38,-,unsigned char,1,-,mandatory,mandatory,-,
 0xB5,Cool air circulator operation setting,Used to set the cool air circulation level for the cool air circulator mode and to acquire the current setting.,Automatic        : 0x41_x000a_Standard          : 0x42 Cool air circulation level_x000a_: 0x31.0x38,-,unsigned char,1,-,optional,optional,-,
 0xBA,Measured relative bathroom humidity,Used to acquire the measured relative humidity of the bathroom.,0x00.0x64 (0.100%),%,unsigned char,1,-,-,optional,-,
-0xBB,Measured bathroom temperature,Used to acquire the measured temperature of the bathroom.,0x81.0x7D (-127.+125.C),.C,signed char,1,-,-,optional,-,
+0xBB,Measured bathroom temperature,Used to acquire the measured temperature of the bathroom.,0x81.0x7D (-127.+125°C),°C,signed char,1,-,-,optional,-,
 0xC2,Ventilation air flow rate setting,Used to set the air flow rate level for the around-the-clock ventilation function and to acquire the current setting.,Automatic: 0x41_x000a_Air flow rate level: 0x31.0x38,-,unsigned char,1,-,optional,optional,-,
 0xCF,Filter cleaning reminder sign setting,Used to set the filter cleaning reminder_x000a_sign status (lit/not lit) and to acquire the current setting.,Lit: 0x41 Not lit: 0x42,-,unsigned char,1,-,optional,optional,-,
 0xE0,Human body detection status,Used to acquire the human body detection status.,Detected: 0x41 Not detected: 0x42,-,unsigned char,1,-,-,optional,-,

@@ -4,7 +4,7 @@ LP gas meter,,0x02,0x83,○,,,,,,,
 ,,,,,,,,,,,
 ,,,,,,,,,,,
 EPC,Property name,Contents of property,Value range(decimal notation),Unit,Data type,Data size,Access rule(Anno),Access rule(Set),Access rule(Get),Announcement at status change,Remark
-0x80,Operation status,This property indicates the ON/OFF status.,"ON=0x30, OFF=0x31",—,unsigned char,1,-,optional,mandatory,mandatory,
+0x80,Operation status,This property indicates the ON/OFF status.,"ON=0x30, OFF=0x31",-,unsigned char,1,-,optional,mandatory,mandatory,
 0xE0,Integral gas consumption of metering data 1,This property indicates integral gas consumption in units of 0.0001 m3.,"0.0x005F5E0FF (0.9999,9999 m3)",0.0001_x000a_m3,unsigned long,4,-,-,mandatory,-,
 0xE1,Integral gas consumption of metering data 2,This property indicates integral gas consumption in units of 0.001 m3.,"0.0x005F5E0FF (0.99999,999 m3)",0.001_x000a_m3,unsigned long,4,-,-,mandatory,-,
 0xE2,Error detection statusof metering data,This property indicates status where meter detected metering data error.,Error detection status found = 0x41 Error detection status not found_x000a_= 0x42,-,unsigned char,1,-,-,optional,mandatory,

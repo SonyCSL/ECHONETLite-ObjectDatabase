@@ -23,6 +23,9 @@ def is_valid_bytes_string(s)
   !s[2..-1][/\H/]
 end
 
+def is_valid_unit_string(s)
+  not s.include?("—")
+end
 
 def check_valid_en(ws)
   def is_valid_header(ws)
@@ -71,12 +74,21 @@ def check_valid_en(ws)
   end
 
   def is_valid_epc_row(ws,r)
-    valid = is_valid_bytes_string ws[r,1]
-    if not valid
+    valid = true
+    is_valid_epc = is_valid_bytes_string ws[r,1]
+    if not is_valid_epc
       printf "Invalid epc notation %s (%d,1)\n",ws[r,1],r
     end
+    valid = valid && is_valid_epc
+
+    is_valid_unit = is_valid_unit_string ws[r,2]
+    if not is_valid_unit
+      printf "Invalid unit notation %s (%d,1)\n",ws[r,2],r
+    end
+    valid = valid && is_valid_unit
     return valid
   end
+
 
   ret = true # is_all_test_passed
   ret = (is_valid_header ws)     && ret
@@ -163,7 +175,7 @@ def main
         valid = (check_valid_en sp.worksheets[0]) && valid
         valid = (check_valid_ja sp.worksheets[1]) && valid
         if valid
-          printf "\033[0;32m -> pased \033[0;39m \n"
+          printf "\033[0;32m -> passed \033[0;39m \n"
           success += 1
         else
           printf "\033[0;31m -> failed \033[0;39m \n"
@@ -177,8 +189,6 @@ def main
   else
     printf "\033[0;31mSome test failed.Number of failed count is (%d/%d)\033[0;39m\n",allcnt-success,allcnt
   end
-
-  # puts read_device(session.spreadsheet_by_key(key).worksheets[0])
 end
 
 if __FILE__ == $0

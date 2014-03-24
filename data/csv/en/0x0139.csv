@@ -4,7 +4,7 @@ Humidifier,,0x01,0x39,○,,,,,,,
 ,,,,,,,,,,,
 ,,,,,,,,,,,
 EPC,Property name,Contents of property,Value range(decimal notation),Unit,Data type,Data size,Access rule(Anno),Access rule(Set),Access rule(Get),Announcement at status change,Remark
-0x80,Operation status,This property indicates the ON/OFF status.,"ON=0x30, OFF=0x31",—,unsigned char,1,-,mandatory,mandatory,mandatory,
+0x80,Operation status,This property indicates the ON/OFF status.,"ON=0x30, OFF=0x31",-,unsigned char,1,-,mandatory,mandatory,mandatory,
 0xC0,Humidifying setting 1,Sets value of relative humidity and get setting status,"0x00.0x64, (0.100%)_x000a_Automatic setting =0x70, Continuous operation =0x71, intermittent operation =0x72",,unsigned char,1,-,mandatory,mandatory,-,
 0xC1,Humidifying setting 2,Sets humidifying level by 3 steps,"Humidifying levels =0x31.0x33 Automatic setting =0x70, Continuous operation =0x71, intermittent operation =0x72",,unsigned char,1,-,mandatory,mandatory,-,
 0xB4,Measured value of relative humidity,This property indicates measured value of relative humidity,"0x00.0x64, (0.100%)",-,unsigned char,1,-,-,optional,-,

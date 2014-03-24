@@ -4,7 +4,7 @@ Combination microwave oven(Electronic oven),,0x03,0xB8,○,,,,,,,
 ,,,,,,,,,,,
 ,,,,,,,,,,,
 EPC,Property name,Contents of property,Value range(decimal notation),Unit,Data type,Data size,Access rule(Anno),Access rule(Set),Access rule(Get),Announcement at status change,Remark
-0x80,Operation status,This  property  indicates  the  ON/OFF status.,"ON=0x30, OFF=0x31",—,unsigned char,1,-,optional,mandatory,mandatory,
+0x80,Operation status,This  property  indicates  the  ON/OFF status.,"ON=0x30, OFF=0x31",-,unsigned char,1,-,optional,mandatory,mandatory,
 0xB0,Door open/close status,Used to acquire the status (i.e. open or closed) of the door of the combination microwave oven.,"Door open = 0x41, door closed = 0x42",-,unsigned char,1,-,-,optional,-,
 0xB1,Heating status,Used to acquire the status of the combination microwave oven.,Initial state = 0x40 Heating = 0x41_x000a_Heating suspended = 0x42_x000a_Reporting completion of heating cycle_x000a_= 0x43_x000a_Setting = 0x44 Preheating = 0x45_x000a_Preheat temperature maintenance = 0x46_x000a_Heating temporarily stopped for manual cooking action = 0x47,-,unsigned char,1,-,-,optional,-,
 0xB2,Heating setting,"Used to specify whether to start, stop or suspend heating, and to acquire the current setting (i.e. current heating status).",Start/restart heating (heating started/restarted) = 0x41_x000a_Suspend heating (heating suspended) = 0x42_x000a_Stop heating (heating stopped) = 0x43,-,unsigned char,1,-,optional,optional,-,
