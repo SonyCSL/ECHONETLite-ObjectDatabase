@@ -2,7 +2,7 @@
 This directory contains some scripts for database managements.
 These scripts written in ruby require following packages.
 
-- google_drive
+- google_drive (https://github.com/gimite/google-drive-ruby)
 
 To install these packages,use gem.
 ```
