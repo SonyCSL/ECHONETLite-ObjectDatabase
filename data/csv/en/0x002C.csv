@@ -1,0 +1,9 @@
+Class name,Remarks,Group code,Class code,Whether or not detailed requirements are provided,,,,,,,
+Snow sensor,,0x00,0x2C,○,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+EPC,Property name,Contents of property,Value range(decimal notation),Unit,Data type,Data size,Access rule(Anno),Access rule(Set),Access rule(Get),Announcement at status change,Remark
+0x80,Operation status,This property indicates ON/OFF status,"ON=0x30, OFF=0x31",.,unsigned char,1,-,optional,mandatory,mandatory,
+0xB0,Detection threshold level,This property indicates threshold levels with 8 steps,0x31-0x38,.,unsigned char,1,-,optional,optional,-,
+0xB1,Snow detection status,This property indicates snow detection,"detected 0x41, not detected 0x42",.,unsigned char,1,-,-,mandatory,mandatory,

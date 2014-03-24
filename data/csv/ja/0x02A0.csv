@@ -1,0 +1,9 @@
+クラス名,備考,,
+ブザー,,,
+,,,
+,,,
+,,,
+EPC,Property name,Contents of property,Value range(decimal notation)
+0x80,動作状態,ON／OFF の状態を示す。,ＯＮ＝0x30，ＯＦＦ＝0x31
+0xB1,音発生設定,ブザー音の発生設定を示す。,音発生有=0x41，音発生無=0x42
+0xE0,ブザー音種別設定,ブザー音の種類（８種類）を示す,0x31.0x38

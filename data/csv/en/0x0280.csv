@@ -1,0 +1,11 @@
+Class name,Remarks,Group code,Class code,Whether or not detailed requirements are provided,,,,,,,
+Electric energy meter,,0x02,0x80,○,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+EPC,Property name,Contents of property,Value range(decimal notation),Unit,Data type,Data size,Access rule(Anno),Access rule(Set),Access rule(Get),Announcement at status change,Remark
+0x80,Operation status,This property indicates the ON/OFF status.,"ON=0x30, OFF=0x31",—,unsigned char,1,-,optional,mandatory,mandatory,
+0xE0,Integral electric energy measurement value,This property indicates integral electric energy in decimal (8 digits).,"0x00000000.0x05F5E0FF (0.99,999,999)",0.1 or_x000a_0.01_x000a_kWh,unsigned long,4,-,-,mandatory,-,
+0xE2,Integral electric energy unit,This property indicates number of decimal places of integral electric energy (0xE0).,0x01 :   0.1kWh_x000a_0x02 :   0.01kWh,.,unsigned char,1,-,-,mandatory,-,
+0xE3,Integral electric energy measurement log 1,This property indicates integral electric energy (8 digits) measurement result log in 30-minute segments for past 24 hours.,"0x00000000.0x05F5E0FF (0.99,999,999)",0.1 or_x000a_0.01_x000a_kWh,unsigned long × 48,192,-,-,optional,-,
+0xE4,Integral electric energy measurement log 2,This property indicates integral electric energy (8 digits) measurement result log for past 24 hours as one-day data in 30-minute segments.,"0x00000000.0x05F5E0FF (0.99,999,999)",0.1 or_x000a_0.01_x000a_kWh,unsigned long_x000a_×48_x000a_×45,192× 45,-,-,optional,-,

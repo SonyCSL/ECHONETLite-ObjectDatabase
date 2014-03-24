@@ -1,0 +1,9 @@
+Class name,Remarks,Group code,Class code,Whether or not detailed requirements are provided,,,,,,,
+Water flow rate sensor,,0x00,0x25,○,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+EPC,Property name,Contents of property,Value range(decimal notation),Unit,Data type,Data size,Access rule(Anno),Access rule(Set),Access rule(Get),Announcement at status change,Remark
+0x80,Operation status,This property indicates the ON/OFF status.,"ON=0x30, OFF=0x31",—,unsigned char,1,-,optional,mandatory,mandatory,
+0xE0,Integral flow rate,This property indicates measured integral flow in cm3.,"0x00000000.0x3B9AC9FF (0._x000a_999,999,999)",cm3,unsigned long,4,-,-,optional,-,
+0xE2,Flow rate,This property indicates measured instantaneous flow rate in cm3/min.,"0x0000.0x3B9AC9FF (0._x000a_999,999,999)",cm3/min,unsigned long,4,-,-,mandatory,-,

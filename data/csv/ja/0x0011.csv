@@ -1,0 +1,8 @@
+クラス名,備考,,
+温度センサ,,,
+,,,
+,,,
+,,,
+EPC,Property name,Contents of property,Value range(decimal notation)
+0x80,動作状態,ON／OFF の状態を示す。,ＯＮ＝0x30，ＯＦＦ＝0x31
+0xE0,温度計測値,温度計測値を(0.1℃単位で)示す。,0xF554 . 0x7FFE( . 2732 ._x000a_32766) (.273.2.3276.6℃)

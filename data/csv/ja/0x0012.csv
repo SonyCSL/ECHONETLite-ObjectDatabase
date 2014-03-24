@@ -1,0 +1,8 @@
+クラス名,備考,,
+湿度センサ,,,
+,,,
+,,,
+,,,
+EPC,Property name,Contents of property,Value range(decimal notation)
+0x80,動作状態,ON／OFF の状態を示す。,ＯＮ＝0x30，ＯＦＦ＝0x31
+0xE0,相対湿度計測値,相対湿度計測値を%単位で示す。,0x00.0x64(0.100%)

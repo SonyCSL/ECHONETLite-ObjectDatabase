@@ -1,0 +1,9 @@
+クラス名,備考,,
+空気汚染センサ,,,
+,,,
+,,,
+,,,
+EPC,Property name,Contents of property,Value range(decimal notation)
+0x80,動作状態,ON／OFF の状態を示す。,ＯＮ＝0x30，ＯＦＦ＝0x31
+0xB0,検知閾値レベル設 定,レベルを８段階で指定。,0x31.0x38
+0xB1,空気汚染検出状態,空気汚染の検出状況を示す。,空気汚染検出有＝0x41， 空気汚染検出無＝0x42

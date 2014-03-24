@@ -1,0 +1,9 @@
+クラス名,備考,,
+水漏れセンサ,,,
+,,,
+,,,
+,,,
+EPC,Property name,Contents of property,Value range(decimal notation)
+0x80,動作状態,ON／OFF の状態を示す。,ＯＮ＝0x30，ＯＦＦ＝0x31
+0xB0,検知閾値レベル 設定,検知閾値レベルを８段階で指定。,0x31.0x38
+0xB1,水漏れ検知状態,水漏れ検知有無を示す。,水漏れ検知有＝0x41 水漏れ検知無＝0x42

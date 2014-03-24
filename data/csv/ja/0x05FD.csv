@@ -1,0 +1,8 @@
+クラス名,備考,,
+スイッチ（JEMA/HA端子対応）,,,
+,,,
+,,,
+,,,
+EPC,Property name,Contents of property,Value range(decimal notation)
+0x80,動作状態,ON／OFF の状態を示す。,ＯＮ＝0x30，ＯＦＦ＝0x31
+0xE0,接続機器,接続先の機器名,機器の形名を保持する

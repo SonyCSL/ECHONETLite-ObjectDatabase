@@ -1,0 +1,8 @@
+クラス名,備考,,
+酸素センサ,,,
+,,,
+,,,
+,,,
+EPC,Property name,Contents of property,Value range(decimal notation)
+0x80,動作状態,ON／OFF の状態を示す。,ＯＮ＝0x30，ＯＦＦ＝0x31
+0xE0,酸素濃度計測値,酸素濃度計測値を 0.01%の単位 で示す,0x0000    .  0x2710(0.00    ._x000a_100.00%)

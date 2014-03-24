@@ -1,0 +1,9 @@
+クラス名,備考,,
+体重計,,,
+,,,
+,,,
+,,,
+EPC,Property name,Contents of property,Value range(decimal notation)
+0x80,動作状態,ON／OFF の状態を示す。,ＯＮ＝0x30，ＯＦＦ＝0x31
+0xE0,体重計測値,体重計測値を 0.1kg 単位で示す。,0x0000.0xFFFD (0.6553.3kg)
+0xE1,体脂肪計測値,体脂肪計測値を 0.1%単位で示す。,0x0000.0x03E8  (0.100.0%)

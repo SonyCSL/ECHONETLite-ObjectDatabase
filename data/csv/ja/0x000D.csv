@@ -1,0 +1,9 @@
+クラス名,備考,,
+照度センサ,,,
+,,,
+,,,
+,,,
+EPC,Property name,Contents of property,Value range(decimal notation)
+0x80,動作状態,ON／OFF の状態を示す。,ＯＮ＝0x30，ＯＦＦ＝0x31
+0xE0,照度計測値 1,照度計測値をルクスの単位で示 す,0x0000.0xFFFD(0.65533   ル_x000a_クス)
+0xE1,照度計測値 2,照度計測値をｋルクスの単位で 示す,0x0000 . 0xFFFD(0 . 65533k_x000a_ルクス)

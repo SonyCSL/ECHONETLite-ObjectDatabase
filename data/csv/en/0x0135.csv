@@ -1,0 +1,12 @@
+Class name,Remarks,Group code,Class code,Whether or not detailed requirements are provided,,,,,,,
+Air cleaner,,0x01,0x35,○,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+EPC,Property name,Contents of property,Value range(decimal notation),Unit,Data type,Data size,Access rule(Anno),Access rule(Set),Access rule(Get),Announcement at status change,Remark
+0x80,Operation status,This property indicates the ON/OFF status.,"ON=0x30, OFF=0x31",—,unsigned char,1,-,mandatory,mandatory,mandatory,
+0xE1,Filter change notice,Filter change time notice found/not found,"Found = 0x41, Not found = 0x42",-,unsigned char,1,-,-,optional,-,
+0xA0,Air flow rate setting,Sets air flow rate level and air flow rate auto status. The ventilation air flow rate is specified (8-step).,Ventilation air flow rate auto status_x000a_= 0x41_x000a_Ventilation air flow rate level_x000a_= 0x31.0x38,-,unsigned char,1,-,optional,optional,-,
+0xC1,Smoke (cigarette) detection status,This property indicates smoke (cigarette) detection status.,Smoke (cigarette) detection status found = 0x41_x000a_Smoke (cigarette) detection status not found = 0x42,-,unsigned char,1,-,-,optional,-,
+0xC2,Optical catalyst operation setting,Optical catalyst ON/OFF status,Optical catalyst ON = 0x41 Optical catalyst OFF = 0x42,-,unsigned char,1,-,optional,optional,-,
+0xC0,Air pollution detection status,This property indicates air pollution detection status,Air pollution detected = 0x41_x000a_Air pollution non-detected = 0x42,-,unsigned char,1,-,-,optional,-,
