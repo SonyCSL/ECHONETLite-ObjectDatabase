@@ -10,11 +10,9 @@ The whole databases (Google Drive version and GitHub version) are distributed un
 
 24 March 2014  Suports APPENDIX, Detailed Requirements for ECHONET Device Objects, Release C
 
-#Application examples
+#Users
 
-[OpenECHO](https://github.com/SonyCSL/OpenECHO), an open source ECHONET Lite driver library, utilizes this database for generation device object class codes.
-
-オープンソースのECHONET LiteのJavaライブラリである[OpenECHO](https://github.com/SonyCSL/OpenECHO)は、本データベースを用いて機器オブジェクトクラスのコードを生成しています。
+[OpenECHO](https://github.com/SonyCSL/OpenECHO) by Sony CSL, an open source ECHONET Lite driver library, utilizes this database for generation device object class codes.
 
 #License
 
@@ -33,5 +31,23 @@ The whole databases (Google Drive version and GitHub version) are distributed un
 This work is published from:
 <span property="vcard:Country" datatype="dct:ISO3166"
       content="JP" about="https://github.com/SonyCSL/ECHONETLite-ObjectDatabase">
-  日本</span>.
+  Japan</span>.
 </p>
+
+#We need your help!
+
+If you find this database useful, please consider volunteering for improvements!
+We welcome your help in three aspects below.
+
+1. Report bugs or suggest improvements on [Issues page](https://github.com/SonyCSL/ECHONETLite-ObjectDatabase/issues), or directly apply your modification to the database to send the [pull request](https://github.com/SonyCSL/ECHONETLite-ObjectDatabase/pulls) to this repository.
+2. Let us know the link to your application that uses this database by posting an email to <img src="http://kadecot.net/media/email.png" align="center"></img>
+Your link will be listed in the #Users section above.
+3. Participate in editing the source data on [Google Drive](https://drive.google.com/folderview?id=0B6eFizhiL1dYNEJqTzJhS1o5aFk). Request the invitation by posting an email to <img src="http://kadecot.net/media/email.png" align="center"></img>
+
+もしこのデータベースがあなたのお役にたてたなら、このデータベースをより良いものにするためのお手伝いをぜひお願いします！
+３種類の方法で本プロジェクトに貢献することができます。
+
+1. バグや改善点のアイデアなどを[Issues page](https://github.com/SonyCSL/ECHONETLite-ObjectDatabase/issues)にポストしてください。データベースを直接修正し、[pull request](https://github.com/SonyCSL/ECHONETLite-ObjectDatabase/pulls)を送って頂くことも歓迎します。
+2. もしこのデータベースを作ってアプリケーションを作ったら、ぜひ<img src="http://kadecot.net/media/email.png" align="center"></img>までその紹介URLを我々に送ってください！
+上記のUsersセクションからリンクを張らせていただきます。
+3. 本レポジトリの元となっている[Google Drive上のスプレッドシート](https://drive.google.com/folderview?id=0B6eFizhiL1dYNEJqTzJhS1o5aFk)の編集にご参加ください。参加していただける方はご招待いたしますので、<img src="http://kadecot.net/media/email.png" align="center"></img>までご連絡ください。
