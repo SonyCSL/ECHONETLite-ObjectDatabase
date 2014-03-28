@@ -27,12 +27,29 @@ class Validator:
         return True
 
     @classmethod
+    def is_valid_data_size(self,s):
+        return s.isdecimal()
+
+    @classmethod
+    def is_valid_access_rule(self,s):
+        return s in ["mandatory","optional","-"]
+
+    @classmethod
+    def is_valid_announcement(self,s):
+        return s in ["mandatory","-"]
+    
+    @classmethod
     def check(self,data):
         return False
 
     @classmethod
     def check_devicelist(self,data):
         return False
+
+    @classmethod
+    def check_valid_text(self,s):
+        return not "_x000a_" in s
+    
 
 class ValidatorEn(Validator):
     @classmethod
@@ -74,14 +91,37 @@ class ValidatorEn(Validator):
     def check_valid_epc_row(self,row,i):
         valid = True
         is_valid_epc = self.is_valid_bytes_string(row[0])
-        is_valid_unit = self.is_valid_unit_string(row[1])
+        is_valid_unit = self.is_valid_unit_string(row[4])
+        is_valid_data_size = self.is_valid_data_size(row[6])
+        is_valid_access_rule_anno = self.is_valid_access_rule(row[7])
+        is_valid_access_rule_set  = self.is_valid_access_rule(row[8])
+        is_valid_access_rule_get  = self.is_valid_access_rule(row[9])
+        is_valid_announcement_at_change = self.is_valid_announcement(row[10])
 
         if not is_valid_epc:
-            print("Invalid EPC %s (%d,1)"%(row[0],i))
+            print("Invalid EPC %s (%d,0)"%(row[0],i))
         if not is_valid_unit:
-            print("Invalid Unit %s (%d,1)"%(row[1],i))
+            print("Invalid Unit %s (%d,4)"%(row[4],i))
+
+        if not is_valid_data_size:
+            print("Invalid datasize %s (%d,6)"%(row[6],i))
+        if not is_valid_access_rule_anno:
+            print("Invalid Rule %s (%d,7)"%(row[7],i))
+        if not is_valid_access_rule_set:
+            print("Invalid Rule %s (%d,8)"%(row[8],i))
+        if not is_valid_access_rule_get:
+            print("Invalid Rule %s (%d,9)"%(row[9],i))
+        if not is_valid_announcement_at_change:
+            print("Invalid Rule %s (%d,10)"%(row[10],i))
+
         valid = valid and is_valid_epc
         valid = valid and is_valid_unit
+        valid = valid and is_valid_data_size
+        valid = valid and is_valid_access_rule_anno
+        valid = valid and is_valid_access_rule_set
+        valid = valid and is_valid_access_rule_get
+        valid = valid and is_valid_announcement_at_change
+
         return valid
 
     @classmethod
@@ -91,7 +131,7 @@ class ValidatorEn(Validator):
         ret = self.check_valid_epc_header(data[5])        and ret
         ret = self.check_valid_class_description(data[1]) and ret
         for i,row in enumerate(data[6:]):
-            ret = self.check_valid_epc_row(row,i)         and ret
+            ret = self.check_valid_epc_row(row,i+6)         and ret
         return ret
 
 class ValidatorJa(Validator):
