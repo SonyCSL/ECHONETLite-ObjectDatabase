@@ -63,6 +63,9 @@ class Validator:
     def is_valid_text(self,s):
         return not "_x000a_" in s
 
+    @classmethod
+    def is_all_ascii(self,s):
+        return all([c in string.ascii_letters+string.digits+" -\",.()/" for c in s])
 
 class ValidatorEn(Validator):
     @classmethod
@@ -104,6 +107,7 @@ class ValidatorEn(Validator):
     def check_valid_epc_row(self,row,i):
         valid = True
         is_valid_epc = self.is_valid_bytes_string(row[0])
+        is_valid_property_name = self.is_valid_text(row[1]) and self.is_all_ascii(row[1])
         is_valid_unit = self.is_valid_unit_string(row[4])
         is_valid_data_size = self.is_valid_data_size(row[6])
         is_valid_access_rule_anno = self.is_valid_access_rule(row[7])
@@ -113,9 +117,10 @@ class ValidatorEn(Validator):
 
         if not is_valid_epc:
             print("Invalid EPC %s (%d,0)"%(row[0],i))
+        if not is_valid_property_name:
+            print("Invalid Property name %s (%d,1)"%(row[1],i))
         if not is_valid_unit:
             print("Invalid Unit %s (%d,4)"%(row[4],i))
-
         if not is_valid_data_size:
             print("Invalid datasize %s (%d,6)"%(row[6],i))
         if not is_valid_access_rule_anno:
@@ -128,6 +133,7 @@ class ValidatorEn(Validator):
             print("Invalid Rule %s (%d,10)"%(row[10],i))
 
         valid = valid and is_valid_epc
+        valid = valid and is_valid_property_name
         valid = valid and is_valid_unit
         valid = valid and is_valid_data_size
         valid = valid and is_valid_access_rule_anno
