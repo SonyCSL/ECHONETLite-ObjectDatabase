@@ -6,6 +6,9 @@ import string
 import argparse
 import os
 
+def is_ascii(c):
+    return ord(c) < 128
+
 class Validator:
     @classmethod
     def check_header(self,imag,real):
@@ -65,7 +68,7 @@ class Validator:
 
     @classmethod
     def is_all_ascii(self,s):
-        return all([c in string.ascii_letters+string.digits+" -\",.()/" for c in s])
+        return all([is_ascii(c) for c in s])
 
 class ValidatorEn(Validator):
     @classmethod
@@ -119,6 +122,7 @@ class ValidatorEn(Validator):
             print("Invalid EPC %s (%d,0)"%(row[0],i))
         if not is_valid_property_name:
             print("Invalid Property name %s (%d,1)"%(row[1],i))
+            # print(row[1].replace("“","\"").replace("_x000a_"," ").replace("”","\""))
         if not is_valid_unit:
             print("Invalid Unit %s (%d,4)"%(row[4],i))
         if not is_valid_data_size:
