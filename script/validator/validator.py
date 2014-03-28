@@ -9,6 +9,8 @@ import os
 class Validator:
     @classmethod
     def check_header(self,imag,real):
+        if len(imag) > len(real):
+            return False
         for i,d in enumerate(imag):
             if d != real[i]:
                 return False
@@ -28,7 +30,18 @@ class Validator:
 
     @classmethod
     def is_valid_data_size(self,s):
-        return s.isdecimal()
+        if s.isdecimal():
+            return True
+        # following format is ok.
+        # <= 100
+        # or 1 2
+        splited = s.split(" ")
+        if splited[0] == "<=":
+            return len(splited) == 2 and splited[1].isdecimal() 
+        elif splited[0] == "or":
+            return len(splited) >= 3 and all([i.isdecimal() for i in splited[1:]])
+        else:
+            return False
 
     @classmethod
     def is_valid_access_rule(self,s):
@@ -37,7 +50,7 @@ class Validator:
     @classmethod
     def is_valid_announcement(self,s):
         return s in ["mandatory","-"]
-    
+
     @classmethod
     def check(self,data):
         return False
@@ -47,9 +60,9 @@ class Validator:
         return False
 
     @classmethod
-    def check_valid_text(self,s):
+    def is_valid_text(self,s):
         return not "_x000a_" in s
-    
+
 
 class ValidatorEn(Validator):
     @classmethod
