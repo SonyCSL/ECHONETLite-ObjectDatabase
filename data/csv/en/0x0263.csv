@@ -10,5 +10,5 @@ EPC,Property name,Contents of property,Value range(decimal notation),Unit,Data t
 0xE2,Blind angle setting,Blind angle,0x00.0xB4 (0.180°),deg,unsigned char,1,-,optional,optional,-,
 0xE3,Shutter speed,Low/medium/high,"Low = 0x41, medium = 0x42, high = 0x43",-,unsigned char,1,-,optional,optional,-,
 0xE4,Extent of opening 2,"Used to specify the extent of opening by selecting a level from among the 256 predefined levels, and to acquire the current setting.",0x00.0xFF (0.255),-,unsigned char,1,-,optional,optional,-,
-0xE5,Electric lock setting,"Used to specify whether or not to activate the electric lock, and to acquire the current setting.","Activated = 0x41, deactivated = 0x42",-,unsigned char_x000a_unsigned char,1/1/2014,-,mandatory,mandatory,mandatory,
+0xE5,Electric lock setting,"Used to specify whether or not to activate the electric lock, and to acquire the current setting.","Activated = 0x41, deactivated = 0x42",-,unsigned char,1,-,mandatory,mandatory,mandatory,
 0xE7,Open/close setting 2,Open/close,"Open = 0x41, close = 0x42",-,unsigned char,1,-,optional,optional,mandatory,
