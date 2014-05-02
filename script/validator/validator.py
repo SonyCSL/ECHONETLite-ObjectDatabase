@@ -40,7 +40,7 @@ class Validator:
         # or 1 2
         splited = s.split(" ")
         if splited[0] == "<=":
-            return len(splited) == 2 and splited[1].isdecimal() 
+            return len(splited) == 2 and splited[1].isdecimal()
         elif splited[0] == "or":
             return len(splited) >= 3 and all([i.isdecimal() for i in splited[1:]])
         else:
@@ -109,20 +109,20 @@ class ValidatorEn(Validator):
     @classmethod
     def check_valid_epc_row(self,row,i):
         valid = True
-        is_valid_epc = self.is_valid_bytes_string(row[0])
-        is_valid_property_name = self.is_valid_text(row[1]) and self.is_all_ascii(row[1])
-        is_valid_unit = self.is_valid_unit_string(row[4])
-        is_valid_data_size = self.is_valid_data_size(row[6])
-        is_valid_access_rule_anno = self.is_valid_access_rule(row[7])
-        is_valid_access_rule_set  = self.is_valid_access_rule(row[8])
-        is_valid_access_rule_get  = self.is_valid_access_rule(row[9])
+        is_valid_epc                    = self.is_valid_bytes_string(row[0])
+        is_valid_property_name          = self.is_valid_text(row[1]) and self.is_all_ascii(row[1])
+        is_valid_unit                   = self.is_valid_unit_string(row[4])
+        is_valid_data_size              = self.is_valid_data_size(row[6])
+        is_valid_access_rule_anno       = self.is_valid_access_rule(row[7])
+        is_valid_access_rule_set        = self.is_valid_access_rule(row[8])
+        is_valid_access_rule_get        = self.is_valid_access_rule(row[9])
         is_valid_announcement_at_change = self.is_valid_announcement(row[10])
 
         if not is_valid_epc:
             print("Invalid EPC %s (%d,0)"%(row[0],i))
         if not is_valid_property_name:
             print("Invalid Property name %s (%d,1)"%(row[1],i))
-            # print(row[1].replace("“","\"").replace("_x000a_"," ").replace("”","\""))
+
         if not is_valid_unit:
             print("Invalid Unit %s (%d,4)"%(row[4],i))
         if not is_valid_data_size:
@@ -150,11 +150,11 @@ class ValidatorEn(Validator):
     @classmethod
     def check(self,data):
         ret = True
-        ret = self.check_valid_class_header(data[0])      and ret
-        ret = self.check_valid_epc_header(data[5])        and ret
+        ret = self.check_valid_class_header(data[0]) and ret
+        ret = self.check_valid_epc_header(data[5]) and ret
         ret = self.check_valid_class_description(data[1]) and ret
         for i,row in enumerate(data[6:]):
-            ret = self.check_valid_epc_row(row,i+6)         and ret
+            ret = self.check_valid_epc_row(row,i+6) and ret
         return ret
 
 class ValidatorJa(Validator):
@@ -217,27 +217,29 @@ def scan_top(dir):
             csv_file_name = os.path.basename(f)
             group_class,ext = os.path.splitext(csv_file_name)
             is_devicelist = group_class == "DeviceList"
-            with open(f) as csv_file:
+            with open(f,newline="") as csv_file:
                 reader = csv.reader(csv_file)
                 ret = True
                 if base == "ja":
                     if is_devicelist:
                         ret = ValidatorJa.check_devicelist(list(reader))
                     else:
-                        ret = ValidatorJa.check(list(reader))
+                        pass
+                        # ret = ValidatorJa.check(list(reader))
                 elif base == "en":
                     if is_devicelist:
                         ret = ValidatorEn.check_devicelist(list(reader))
                     else:
-                        ret = ValidatorEn.check(list(reader))
+                        lis = list(reader)
+                        # ret = ValidatorEn.check(list(reader))
                 else:
                     print("There is no Validator for " + base)
                     ret = False
                 if ret:
                     passed += 1
-                    print("\033[0;32m -> passed \033[0;39m")
+                    print("\033[0;32m -> passed\033[0;39m")
                 else:
-                    print("\033[0;31m -> failed \033[0;39m")
+                    print("\033[0;31m -> failed\033[0;39m")
                 checked += 1
 
         if checked == passed:

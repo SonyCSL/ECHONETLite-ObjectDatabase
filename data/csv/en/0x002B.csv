@@ -6,6 +6,6 @@ Human body location sensor,,0x00,0x2B,○,,,,,,,
 EPC,Property name,Contents of property,Value range(decimal notation),Unit,Data type,Data size,Access rule(Anno),Access rule(Set),Access rule(Get),Announcement at status change,Remark
 0x80,Operation status,This  property  indicates  the  ON/OFF status.,"ON=0x30, OFF=0x31",-,unsigned char,1,-,optional,mandatory,mandatory,
 0xE0,Human body detection location 1,This property indicates human body detection location. The array element number indicates a human body ID.,1st byte: X coordinate; 2nd byte: Y coordinate; 3rd byte: Z coordinate,-,unsigned char × 3_x000a_x max 128,<= 384,-,-,mandatory,-,
-0xE1,Maximum number of human body ID’s,This property indicates maximum number of human body IDs that can be registered for human body detection location 1.,0x0001.0x0080 (= 1.128),-,unsigned short,2,-,-,optional,-,
+0xE1,Maximum number of human body ID's,This property indicates maximum number of human body IDs that can be registered for human body detection location 1.,0x0001.0x0080 (= 1.128),-,unsigned short,2,-,-,optional,-,
 0xE2,Human body detection location 2,This property indicates human body detection location.,1st byte: X coordinate; 2nd byte: Y coordinate; 3rd byte: Z coordinate,-,unsigned char × 3,3,-,-,mandatory,-,
 0xE3,Human body existence information,Array element number information retained by human body detection location 1.,(See (5) below for details.),-,unsigned char × 16,16,-,-,optional,-,
