@@ -9,6 +9,7 @@ EPC,Property name,Contents of property,Value range(decimal notation),Unit,Data t
 0xC9,Minimum/maxim um discharge electric energy,This property indicates the minimum/maximum electric energy for discharging in W.,"0x00000000.0x3B9AC9FF (0.999,999,999W)_x000a_Minimum : maximum",W,unsigned long_x000a_×2,8,-,-,optional,-,
 0xCA,Minimum/maxim um charge current,This property indicates the minimum/maximum current for charging in increments of 0.1A.,"0x0000.0x7FFE(0.3,276.6A)_x000a_Minimum : maximum",0.1A,unsigned short_x000a_×2,4,-,-,optional,-,
 0xCB,Minimum/maxim um discharge current,This property indicates the minimum/maximum current for discharging in increments of 0.1A.,"0x0000.0x7FFE(0.3,276.6A)_x000a_Minimum : maximum",0.1A,unsigned short_x000a_×2,4,-,-,optional,-,
+0xCF,Working operation status,This property indicates the working operation status.,"Rapid charging = 0x41, Charging = 0x42, Discharging = 0x43, Standby = 0x44, Test = 0x45, Other = 0x40",,,,,,,,
 0xD0,Rated electric energy,This property indicates the rated electric energy of the battery in Wh.,"0x00000000.0x3B9AC9FF (0._x000a_999,999,999Wh)",Wh,unsigned long,4,-,-,optional,-,
 0xD1,Rated capacity,This property indicates the rated charging capacity of the battery in increments of 0.1Ah.,"0x0000.0x7FFE (0.3,276.6Ah)",0.1Ah,unsigned short,2,-,-,optional,-,
 0xD2,Rated voltage,This property indicates the rated voltage of the battery in volts.,"0x0000.0x7FFE (0.32,766V)",V,unsigned short,2,-,-,optional,-,
