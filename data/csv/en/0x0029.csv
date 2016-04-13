@@ -5,6 +5,6 @@ Open/close sensor,,0x00,0x29,○,,,,,,,
 ,,,,,,,,,,,
 EPC,Property name,Contents of property,Value range(decimal notation),Unit,Data type,Data size,Access rule(Anno),Access rule(Set),Access rule(Get),Announcement at status change,Remark
 0x80,Operation status,This property indicates the ON/OFF status.,"ON=0x30, OFF=0x31",-,unsigned char,1,-,optional,mandatory,mandatory,
-0xE0,Degree-of-openi ng detection status 1,Specifies open/close detection status and one of 8 different degrees of opening.,Close detected: 0x30;_x000a_Degree-of-opening level: 0x31 to 0x38;_x000a_Open detected but degree-of-opening unknown: 0x39,-,unsigned char,1,-,-,mandatory,-,
+0xE0,Degree-of-openi ng detection status 1,Specifies open/close detection status and one of 8 different degrees of opening.,Close detected: 0x30; Degree-of-opening level: 0x31 to 0x38; Open detected but degree-of-opening unknown: 0x39,-,unsigned char,1,-,-,mandatory,-,
 0xB0,Detection threshold level,Specifies detection threshold level (8-step).,Detection threshold level 0x31.0x38,-,unsigned char,1,-,optional,optional,-,
-0xB1,Degree-of-openi ng detection status 2,Specifies whether degree-of .opening detected or not,"Degree-of-opening detection detected_x000a_=0x41, not detected =0x42",-,unsigned char,1,-,-,mandatory,mandatory,
+0xB1,Degree-of-openi ng detection status 2,Specifies whether degree-of .opening detected or not,"Degree-of-opening detection detected =0x41, not detected =0x42",-,unsigned char,1,-,-,mandatory,mandatory,

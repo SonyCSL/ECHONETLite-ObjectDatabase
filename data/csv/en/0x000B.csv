@@ -6,4 +6,4 @@ Air pollution sensor,,0x00,0x0B,○,,,,,,,
 EPC,Property name,Contents of property,Value range(decimal notation),Unit,Data type,Data size,Access rule(Anno),Access rule(Set),Access rule(Get),Announcement at status change,Remark
 0x80,Operation status,This property indicates the ON/OFF status.,"ON=0x30, OFF=0x31",-,unsigned char,1,-,optional,mandatory,mandatory,
 0xB0,Detection threshold level,Specifies detection threshold level (8-step).,0x31.0x38,-,unsigned char,1,-,optional,optional,-,
-0xB1,Air pollution detection status,This property indicates air pollution detection status.,Air pollution detection status found_x000a_= 0x41_x000a_Air pollution detection status not found = 0x42,-,unsigned char,1,-,-,mandatory,mandatory,
+0xB1,Air pollution detection status,This property indicates air pollution detection status.,Air pollution detection status found = 0x41 Air pollution detection status not found = 0x42,-,unsigned char,1,-,-,mandatory,mandatory,

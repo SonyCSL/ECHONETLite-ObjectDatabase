@@ -14,7 +14,7 @@ EPC,Property name,Contents of property,Value range(decimal notation),Unit,Data t
 0xC7,Measured instantaneous gas consumption,This property indicates the instantaneous gas consumption in increments of 0.001m3/h.,0x0000–0xFFFD (0–65.533m3/h),0.001 m3/h,unsigned short,2,-,-,optional,-,
 0xC8,Measured cumulative gas consumption,This property indicates the cumulative gas consumption in increments of 0.001m3.,"0x00000000–0x3B9AC9FF (0–999,999.999m3)",0.001 m3,unsigned long,4,-,-,optional,-,
 0xC9,Cumulative gas consumption reset setting,Resets the cumulative gas consumption by writing 0x00.,Reset=0x00,,unsigned char,1,-,optional,-,-,
-0xCA,Power generation setting_x000a_,This property instructs the start or stop of power generation.,"Power generation ON=0x41, Power generation OFF=0x42",,unsigned char,1,-,optional,-,-,
+0xCA,Power generation setting ,This property instructs the start or stop of power generation.,"Power generation ON=0x41, Power generation OFF=0x42",,unsigned char,1,-,optional,-,-,
 0xCB,Power generation status,This property indicates power generation status.,"generating =0x41, stopped=0x42, idling=0x45",,unsigned char,1,-,-,optional,-,
 0xCC,Measured in-house instantaneous power consumption,This property indicates the measured in-house instantaneous power consumption in watts.,0x0000-0xFFFD (0-65.533W),W,unsigned short,2,-,-,optional,-,
 0xCD,Measured in-house cumulative power consumption,This property indicates the measured in-house cumulative power consumption in0.001kWh.,"0x00000000-0x3B9AC9FF (0-999,999.999kWh)",0.001 kWh,unsigned long,4,-,-,optional,-,

@@ -5,6 +5,6 @@ Current value sensor,,0x00,0x23,○,,,,,,,
 ,,,,,,,,,,,
 EPC,Property name,Contents of property,Value range(decimal notation),Unit,Data type,Data size,Access rule(Anno),Access rule(Set),Access rule(Get),Announcement at status change,Remark
 0x80,Operation status,This property indicates the ON/OFF status.,"ON=0x30, OFF=0x31",-,unsigned char,1,-,optional,mandatory,mandatory,
-0xE0,Measured current value 1,This property indicates measured current value in mA.,"0x00000000.0xFFFFFFFD (0._x000a_4,294,967,293mA)",mA,unsigned long,4,-,-,mandatory,-,
+0xE0,Measured current value 1,This property indicates measured current value in mA.,"0x00000000.0xFFFFFFFD (0. 4,294,967,293mA)",mA,unsigned long,4,-,-,mandatory,-,
 0xE1,Rated voltage to be measured,Rated voltage value to be measured by current sensor,0x0000.0xFFFD (0.65533V),V,unsigned short,2,-,-,optional,-,
-0xE2,Measured current value 2,This property indicates measured current value in mA.,"0x80000001.0x7FFFFFFFE_x000a_(-2,147,483,647.2,147,483,646mA)",mA,unsigned long,4,-,-,mandatory,-,
+0xE2,Measured current value 2,This property indicates measured current value in mA.,"0x80000001.0x7FFFFFFFE (-2,147,483,647.2,147,483,646mA)",mA,unsigned long,4,-,-,mandatory,-,

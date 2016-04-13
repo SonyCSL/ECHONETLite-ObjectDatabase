@@ -5,4 +5,4 @@
 ,,,
 EPC,Property name,Contents of property,Value range(decimal notation)
 0x80,動作状態,ON／OFF の状態を示す。,ＯＮ＝0x30，ＯＦＦ＝0x31
-0xE0,差圧計測値,差圧計測値を Pa で示す。,0x8001 . 0x7FFE( . 32767 ._x000a_32766)
+0xE0,差圧計測値,差圧計測値をPaで示す。,0x8001～0x7FFE(-32767～32766)
