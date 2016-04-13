@@ -5,5 +5,5 @@
 ,,,
 EPC,Property name,Contents of property,Value range(decimal notation)
 0x80,動作状態,ON／OFF の状態を示す。,ＯＮ＝0x30，ＯＦＦ＝0x31
-0xBF,換気自動設定,AUTO／非 AUTO,"AUTO＝0x41,非 AUTO＝0x42"
-0xA0,換気風量設定,換気風量レベルおよび換気風量 自動状態を設定。換気風量レベ ルを 8 段階で指定。,換気風量自動状態＝0x41 換気風量レベル＝0x31.0x38
+0xBF,換気自動設定,AUTO／非AUTO,"AUTO＝0x41,非AUTO＝0x42"
+0xA0,換気風量設定,換気風量レベルおよび換気風量自動状態を設定。換気風量レベルを8段階で指定。,換気風量自動状態＝0x41 換気風量レベル＝0x31～0x38

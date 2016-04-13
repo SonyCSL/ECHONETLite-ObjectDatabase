@@ -5,5 +5,5 @@
 ,,,
 EPC,Property name,Contents of property,Value range(decimal notation)
 0x80,動作状態,ON／OFF の状態を示す。,ＯＮ＝0x30，ＯＦＦ＝0x31
-0xE0,風速計測値,風速計測値を 0.01m/sec で示す。,0x0000.0xFFFD(0.65533)_x000a_(0.655.33m/sec)
-0xE1,風向,風向の角度値を示す。,0x0000.0x0168_x000a_(0.360degree)
+0xE0,風速計測値,風速計測値を0.01m/secで示す。,0x0000～0xFFFD(0～65533) (0～655.33m/sec)
+0xE1,風向,風向の角度値を示す。,0x0000～0x0168(0～360degree)

@@ -5,4 +5,4 @@
 ,,,
 EPC,Property name,Contents of property,Value range(decimal notation)
 0x80,動作状態,ON／OFF の状態を示す。,ＯＮ＝0x30，ＯＦＦ＝0x31
-0xE0,CO2  濃度 計 測 値,CO2 濃度計測値を ppm で示す。,0x0000.0xFFFD(0.65533)
+0xE0,CO2濃度計測値,CO2濃度計測値をppmで示す。,0x0000～0xFFFD(0～65533)
